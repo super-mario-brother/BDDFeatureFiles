@@ -15,7 +15,8 @@ Scenario Outline: I should be able to log in to my Waitrose account
     Then I must verify that login was successful
 
 Examples:
-    | validuser1@email.com | validpassword1 |
+    | valid_email          |valid_password  |
+	| validuser1@email.com | validpassword1 |
     | validuser2@email.com | validpassword2 |
 
 Scenario Outline: I should not be able to login with empty or invalid details
@@ -23,6 +24,7 @@ Scenario Outline: I should not be able to login with empty or invalid details
     Then I must verify that I was unable to login and still on login page
     And message “We didn't recognise your details.” is displayed
 Examples:
+	|invalid_email          |invalid_password   |
 	|invaliduser1@email.com	|invalidpassword1	|
     |validuser1@email.com	|invalidpassword1	|
 	|validuser1@email.com	|null		    	|

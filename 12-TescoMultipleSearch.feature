@@ -12,6 +12,7 @@ Scenario Outline: I should be able to search for product and see the results
     Then I must verify that list of relevant products is displayed
 
     Examples:
+        |product    |
         |Cucumber   |
         |Tomatoe    |
         |Lettuce    |

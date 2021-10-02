@@ -11,6 +11,7 @@ Scenario Outline: User should be able to login providing valid details
     When User tries to log in with <valid_email> and <valid_password>
     Then User can verify that he’s accessed membership area page
     Examples:
+		|valid_email         |valid_password|
 		|validuser1@email.com|validpassword1|
 		|validuser2@email.com|validpassword2|
 
@@ -19,6 +20,7 @@ Scenario Outline: User should not be able to login with empty or invalid details
     Then User must verify that he’s still on login page
     And message “There’s a problem” is displayed
 	Examples:
+		|invalid_email          |invalid_password	|
 		|invaliduser1@email.com	|invalidpassword1	|
         |validuser1@email.com	|invalidpassword1	|
 		|validuser1@email.com	|null		    	|

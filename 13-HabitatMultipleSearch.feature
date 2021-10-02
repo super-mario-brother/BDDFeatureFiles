@@ -13,6 +13,7 @@ Scenario Outline: I should be able to search for a products and each time see re
     Then I must verify that list of products relevant to my search is displayed
 
     Examples:
+        |product    |
         |Lamp       |
         |Desk       |
         |Wardrobe   |
